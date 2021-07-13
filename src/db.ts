@@ -1,0 +1,26 @@
+export let registeredUsers = [
+    {
+        username:'person1',
+        password:'abc',
+    },
+    {
+        username:'person2',
+        password:'abc',
+    },
+    {
+        username:'person3',
+        password:'abc',
+    },
+    {
+        username:'person4',
+        password:'abc',
+    },
+    {
+        username:'person5',
+        password:'abc',
+    },
+    {
+        username:'person6',
+        password:'abc',
+    },
+];
