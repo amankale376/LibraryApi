@@ -5,6 +5,7 @@ import {Users , checkUserDto} from './dto/user.dto';
 
 @Controller('book-order')
 export class BookOrderController {
+    
     constructor(private readonly checkUserService:CheckUserService , private readonly bookAvailService:BookAvailService ){};
 
     @Post()
@@ -23,7 +24,7 @@ export class BookOrderController {
         }
         
         }else{
-            return 'user is not registered';
+            return 'password is not correct';
         }
     }
 

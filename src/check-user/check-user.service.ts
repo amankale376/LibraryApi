@@ -8,11 +8,10 @@ export class CheckUserService {
 
     checkuser(payload: checkUserDto):boolean{
         return this.regUsers.some(user=>{
-            if(payload.username === user.username){
                 if(payload.password === user.password){
                     return true; 
                 }else return false;
-            }else return false;
+            
         });
           
     }
