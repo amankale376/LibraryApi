@@ -1,14 +1,12 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
-import { BookAvailService } from './book-avail/book-avail.service';
-import { BookOrderController } from './book-order/book-order.controller';
-import { CheckUserService } from './check-user/check-user.service';
 import { UsernameCheck } from './common/middleware/usernameCheck.middleware';
-
+import {MongooseModule} from '@nestjs/mongoose';
+import { UsersModule } from './check-user/users.module';
+import { BooksModule } from './book-order/books.module';
 
 @Module({
-  imports: [],
-  controllers: [BookOrderController],
-  providers: [BookAvailService, CheckUserService],
+  imports: [MongooseModule.forRoot('mongodb+srv://aman:Test@123@cluster0.5lgy3.mongodb.net/library'), UsersModule , BooksModule],
+
 })
 export class AppModule implements NestModule {
   configure(consumer:MiddlewareConsumer){

@@ -1,5 +1,5 @@
 import { Body, Controller , Get, Post   } from '@nestjs/common';
-import { BookAvailService } from 'src/book-avail/book-avail.service';
+import { BookAvailService } from '../book-order/book-avail.service';
 import { CheckUserService } from 'src/check-user/check-user.service';
 import {Users , checkUserDto} from './dto/user.dto';
 
